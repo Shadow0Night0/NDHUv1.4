@@ -2,13 +2,6 @@
 GIT GUD
 teammate sux
 What a save!
-<<<<<<< HEAD
 
 Test to see what happens
-<<<<<<< HEAD
-
 change lab pc 1st
-=======
->>>>>>> parent of 114d6b0 (Update javi.txt)
-=======
->>>>>>> parent of 7eff196 (test  and some player s)
