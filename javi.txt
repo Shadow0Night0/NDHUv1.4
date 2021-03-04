@@ -11,4 +11,4 @@ change lab pc 1st
 =======
 >>>>>>> parent of 114d6b0 (Update javi.txt)
 =======
->>>>>>> parent of a34b781 (Update javi.txt)
+>>>>>>> parent of 7eff196 (test  and some player s)
