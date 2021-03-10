@@ -458,6 +458,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3244049319574174701, guid: 9679919746e89ac4cae00f018a23bcbe, type: 3}
+      propertyPath: invert
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244049319574174701, guid: 9679919746e89ac4cae00f018a23bcbe, type: 3}
       propertyPath: lookRoot
       value: 
       objectReference: {fileID: 602242026}
@@ -467,7 +471,7 @@ PrefabInstance:
       objectReference: {fileID: 1013467060}
     - target: {fileID: 3244049319574174701, guid: 9679919746e89ac4cae00f018a23bcbe, type: 3}
       propertyPath: roll_Angle
-      value: 100
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4903855745179248296, guid: 9679919746e89ac4cae00f018a23bcbe, type: 3}
       propertyPath: m_Name
