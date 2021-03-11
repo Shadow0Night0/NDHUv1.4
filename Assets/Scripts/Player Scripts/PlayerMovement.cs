@@ -8,10 +8,15 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 move_Direction;
 
+    [SerializeField]
     public float speed = 5f;
+
+    [SerializeField]
     private float gravity = 20f;
 
+    [SerializeField]
     public float jump_Force = 10f;
+    
     private float vertical_Velocity;
 
     void Awake()

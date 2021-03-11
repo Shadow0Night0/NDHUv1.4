@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &602242026 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8682580425071925904, guid: 9679919746e89ac4cae00f018a23bcbe, type: 3}
-  m_PrefabInstance: {fileID: 5303866369391682646}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,11 +216,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!4 &1013467060 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2124582776612398157, guid: 9679919746e89ac4cae00f018a23bcbe, type: 3}
-  m_PrefabInstance: {fileID: 5303866369391682646}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1484197055
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,22 +446,6 @@ PrefabInstance:
     - target: {fileID: 2124582776612398157, guid: 9679919746e89ac4cae00f018a23bcbe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3244049319574174701, guid: 9679919746e89ac4cae00f018a23bcbe, type: 3}
-      propertyPath: invert
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3244049319574174701, guid: 9679919746e89ac4cae00f018a23bcbe, type: 3}
-      propertyPath: lookRoot
-      value: 
-      objectReference: {fileID: 602242026}
-    - target: {fileID: 3244049319574174701, guid: 9679919746e89ac4cae00f018a23bcbe, type: 3}
-      propertyPath: playerRoot
-      value: 
-      objectReference: {fileID: 1013467060}
-    - target: {fileID: 3244049319574174701, guid: 9679919746e89ac4cae00f018a23bcbe, type: 3}
-      propertyPath: roll_Angle
-      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4903855745179248296, guid: 9679919746e89ac4cae00f018a23bcbe, type: 3}
       propertyPath: m_Name
