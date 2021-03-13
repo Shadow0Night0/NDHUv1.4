@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
+
     [SerializeField]//serializfild lets variiable be seen and edited in the unity editor
     private Transform playerRoot, lookRoot;
 
@@ -47,6 +48,7 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         LockAndUnlockCursor();
         if (Cursor.lockState == CursorLockMode.Locked)
         {
@@ -54,9 +56,11 @@ public class MouseLook : MonoBehaviour
         }
     }
 
+    
     void LockAndUnlockCursor()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (Cursor.lockState == CursorLockMode.Locked)
             {
@@ -69,7 +73,8 @@ public class MouseLook : MonoBehaviour
             }
         }
     }
-
+    
+    
     void LookAround()
     {
         current_Mouse_Look = new Vector2( Input.GetAxis(Mouse.Y) , 
