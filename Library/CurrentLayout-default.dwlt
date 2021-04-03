@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Hierarchy
   m_RootView: {fileID: 11}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 139
+  controlID: 134
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 40
+  controlID: 51
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_MinSize: {x: 433, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 0
-  controlID: 39
+  controlID: 50
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -198,10 +198,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 709, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MinSize: {x: 708, y: 492}
+  m_MaxSize: {x: 18003, y: 14042}
   vertical: 1
-  controlID: 127
+  controlID: 17
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,10 +223,10 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 947
-  m_MinSize: {x: 709, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MinSize: {x: 708, y: 492}
+  m_MaxSize: {x: 18003, y: 14042}
   vertical: 0
-  controlID: 128
+  controlID: 18
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -246,8 +246,8 @@ MonoBehaviour:
     y: 0
     width: 498
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -303,8 +303,8 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LoadedToolbars:
-  - {fileID: 21}
-  m_MainToolbar: {fileID: 21}
+  - {fileID: 22}
+  m_MainToolbar: {fileID: 22}
   m_LastLoadedLayoutName: 
 --- !u!114 &13
 MonoBehaviour:
@@ -404,7 +404,7 @@ MonoBehaviour:
     height: 456
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: 
+    m_NameFilter: bush
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -416,22 +416,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Grass And Flowers Pack 1/Ground Textures
+    - Assets/PolygonCity/Prefabs/Environments
     m_Globs: []
-    m_OriginalText: 
+    m_OriginalText: bush
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Grass And Flowers Pack 1/Ground Textures
+  - Assets/PolygonCity/Prefabs/Environments
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\3rdYears\Desktop\NDHU\NDHUv1.4
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 646a0000
-    m_LastClickedID: 27236
-    m_ExpandedIDs: 00000000286a00002a6a00002c6a00002e6a0000306a0000326a0000446a000000ca9a3b
+    scrollPos: {x: 0, y: 80}
+    m_SelectedIDs: 906c0000
+    m_LastClickedID: 27792
+    m_ExpandedIDs: 000000008a6c00008c6c00008e6c0000906c0000926c0000946c0000ae6c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -459,7 +459,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000286a00002a6a00002c6a00002e6a0000306a0000326a0000
+    m_ExpandedIDs: 000000008a6c00008c6c00008e6c0000906c0000926c0000946c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -580,20 +580,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 06dcffff
-      m_LastClickedID: -9210
-      m_ExpandedIDs: 3efbffff40fbffff
+      m_SelectedIDs: dcefffff
+      m_LastClickedID: -4132
+      m_ExpandedIDs: 88d8fffffcfaffff14fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: map_2.osm_roads_primary
-        m_OriginalName: map_2.osm_roads_primary
+        m_Name: AdminFrontBush
+        m_OriginalName: AdminFrontBush
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -6910
+        m_UserData: -103726
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -642,9 +642,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -342.4385, y: 15.962629, z: -10.18573}
+    m_Target: {x: -663.0315, y: 21.78437, z: 438.2844}
     speed: 2
-    m_Value: {x: -342.4385, y: 15.962629, z: -10.18573}
+    m_Value: {x: -663.0315, y: 21.78437, z: 438.2844}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -691,13 +691,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.027211353, y: -0.91941667, z: 0.3869877, w: -0.064653434}
+    m_Target: {x: -0.07958999, y: -0.9121452, z: 0.34114736, w: -0.21280663}
     speed: 2
-    m_Value: {x: 0.027211355, y: 0.9194167, z: -0.3869877, w: 0.064653434}
+    m_Value: {x: -0.07958954, y: -0.91213995, z: 0.34114543, w: -0.2128054}
   m_Size:
-    m_Target: 1694.5709
+    m_Target: 91.94095
     speed: 2
-    m_Value: 1694.5709
+    m_Value: 87.981766
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -791,18 +791,18 @@ MonoBehaviour:
       y: 21
       width: 1090
       height: 435
-    m_Scale: {x: 1.1940521, y: 1.1940521}
-    m_Translation: {x: 553.43744, y: 237.72426}
+    m_Scale: {x: 1.304773, y: 1.304773}
+    m_Translation: {x: 516.1735, y: 238.62462}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -463.4952
-      y: -199.09036
-      width: 912.858
-      height: 364.30573
+      x: -395.6041
+      y: -182.88593
+      width: 835.39435
+      height: 333.39133
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1090, y: 456}
@@ -812,6 +812,31 @@ MonoBehaviour:
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
 --- !u!114 &21
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12059, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEditor.CoreModule:UnityEditor.Experimental.TerrainAPI:PaintTextureTool
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Failed to load
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 320
+    height: 550
+  m_ViewDataDictionary: {fileID: 0}
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

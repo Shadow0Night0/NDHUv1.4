@@ -19,12 +19,13 @@ public class PlayerFootsteps : MonoBehaviour
     [HideInInspector]
     public float step_Distance;
 
+
     // Start is called before the first frame update
     void Awake ()
     {
         footstep_Sound = GetComponent<AudioSource>();
 
-        character_Controller = GetComponent<CharacterController>();
+        character_Controller = GetComponentInParent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -40,6 +41,9 @@ public class PlayerFootsteps : MonoBehaviour
 
         if(character_Controller.velocity.sqrMagnitude > 0)
         {
+            // accumulated distance is value indicating how far we go 
+            // e.g. make a step, sprint, or move while crouching
+            // until the footstep sound sounds start playing
             accumulated_Distance += Time.deltaTime;
 
             if(accumulated_Distance > step_Distance)
@@ -50,6 +54,10 @@ public class PlayerFootsteps : MonoBehaviour
 
                 accumulated_Distance = 0f;
             }
+        }
+        else
+        {
+            accumulated_Distance = 0f;
         }
 
 
