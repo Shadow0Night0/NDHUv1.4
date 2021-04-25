@@ -9,7 +9,14 @@ public class WeaponManager : MonoBehaviour
 
     private int current_Weapon_Index;
 
+    private GameObject crosshair;
+
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        crosshair = GameObject.FindWithTag(Tags.CROSSHAIR);
+    }
     void Start()
     {
         current_Weapon_Index = 0;

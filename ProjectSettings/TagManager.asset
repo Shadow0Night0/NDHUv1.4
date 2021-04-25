@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Axe
+  - Crosshair
+  - Look Root
+  - FP Camera
+  - Arrow
   layers:
   - Default
   - TransparentFX
