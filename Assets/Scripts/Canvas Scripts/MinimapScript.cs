@@ -6,6 +6,7 @@ public class MinimapScript : MonoBehaviour
 {
 
     public Transform player;
+    private GameObject crosshair;
 
     [SerializeField] GameObject ndhuMap;
 
@@ -14,6 +15,11 @@ public class MinimapScript : MonoBehaviour
 
     public static bool isMapOpen = false;
 
+    void Awake()
+    {
+        crosshair = GameObject.FindWithTag(Tags.CROSSHAIR);
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.M))
@@ -21,10 +27,12 @@ public class MinimapScript : MonoBehaviour
             if (isMapOpen)
             {
                 CloseMap();
+                crosshair.SetActive(true);
             }
             else
             {
                 OpenMap();
+                crosshair.SetActive(false);
             }
         }
             
