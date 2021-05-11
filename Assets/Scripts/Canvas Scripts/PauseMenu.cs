@@ -8,8 +8,14 @@ public class PauseMenu : MonoBehaviour
     // PauseMenu script in canvas because
     // we cant activate a script form initially disabled GameObject
     public static bool isGamePaused = false;
+    private GameObject crosshair;
 
     [SerializeField] GameObject pauseMenu;
+
+    private void Awake()
+    {
+        crosshair = GameObject.FindWithTag(Tags.CROSSHAIR);
+    }
 
     // Update is called once per frame
     void Update()
@@ -19,10 +25,12 @@ public class PauseMenu : MonoBehaviour
             if (isGamePaused)
             {
                 ResumeGame();
+                crosshair.SetActive(true);
             }
             else
             {
                 PauseGame();
+                crosshair.SetActive(false);
             }
         }
     }
