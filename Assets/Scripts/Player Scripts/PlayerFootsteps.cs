@@ -9,6 +9,7 @@ public class PlayerFootsteps : MonoBehaviour
     [SerializeField]
     private AudioClip[] footsteps_Clip;
 
+    [SerializeField]
     private CharacterController character_Controller;
 
     [HideInInspector]
@@ -29,12 +30,12 @@ public class PlayerFootsteps : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         CheckToPlayFootstepSound();
     }
 
-    void CheckToPlayFootstepSound()
+    private void CheckToPlayFootstepSound()
     {
         if (!character_Controller.isGrounded)
             return;

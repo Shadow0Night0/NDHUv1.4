@@ -65,7 +65,6 @@ public class MinimapScript : MonoBehaviour
 
         playerIndicator.transform.position = Vector3.Lerp(lastPosition, newPosition, INTERPOLANT);
         lastPosition = newPosition;
-        
 
 
     }

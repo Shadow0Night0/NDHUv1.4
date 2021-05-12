@@ -30,13 +30,9 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform rearLeftWheelTransform;
     [SerializeField] private Transform rearRightWheelTransform;
 
-
     private void FixedUpdate()
     {
-        GetInput();
-        HandleMotor();
-        HandleSteering();
-        UpdateWheels();
+       
     }
 
 
@@ -53,6 +49,14 @@ public class CarController : MonoBehaviour
         frontRightWheelCollider.motorTorque = verticalInput * motorForce;
         currentbreakForce = isBreaking ? breakForce : 0f;
         ApplyBreaking();       
+    }
+
+    public void SetInputs(float forwardAmount, float turnAmount)
+    {
+        frontLeftWheelCollider.motorTorque = forwardAmount * motorForce;
+        frontRightWheelCollider.motorTorque = forwardAmount * motorForce;
+        frontLeftWheelCollider.steerAngle = turnAmount;
+        frontRightWheelCollider.steerAngle = turnAmount;
     }
 
     private void ApplyBreaking()
@@ -85,5 +89,11 @@ public class CarController : MonoBehaviour
 ;       wheelCollider.GetWorldPose(out pos, out rot);
         wheelTransform.rotation = rot;
         wheelTransform.position = pos;
+    }
+
+    public float GetSpeed()
+    {
+        return GetComponent<Rigidbody>().velocity.magnitude;
+        
     }
 }
