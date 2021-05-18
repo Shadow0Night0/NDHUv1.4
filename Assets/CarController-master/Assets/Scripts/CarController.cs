@@ -53,10 +53,19 @@ public class CarController : MonoBehaviour
 
     public void SetInputs(float forwardAmount, float turnAmount)
     {
-        frontLeftWheelCollider.motorTorque = forwardAmount * motorForce;
-        frontRightWheelCollider.motorTorque = forwardAmount * motorForce;
+        rearLeftWheelCollider.motorTorque = forwardAmount* motorForce;
+        rearRightWheelCollider.motorTorque = forwardAmount* motorForce;
+        if ((turnAmount > maxSteerAngle && turnAmount >= 0) || turnAmount< -maxSteerAngle)
+        {
+            if (turnAmount >= 0 && turnAmount > 15)
+            {
+                turnAmount = maxSteerAngle;
+            }
+            else turnAmount = -maxSteerAngle;
+        }
         frontLeftWheelCollider.steerAngle = turnAmount;
         frontRightWheelCollider.steerAngle = turnAmount;
+        UpdateWheels();
     }
 
     private void ApplyBreaking()

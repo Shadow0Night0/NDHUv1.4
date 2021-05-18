@@ -71,7 +71,7 @@ public class MinimapScript : MonoBehaviour
 
 
 
-        Debug.Log((newIndicatorPos));
+        //Debug.Log((newIndicatorPos));
         playerIndicator.anchoredPosition = (newIndicatorPos + playerIndicatorOffset);
         // Player Indicator Movement in the Big Map 
 

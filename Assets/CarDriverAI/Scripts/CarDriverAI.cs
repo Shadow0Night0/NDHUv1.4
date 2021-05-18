@@ -5,27 +5,45 @@ using UnityEngine;
 public class CarDriverAI : MonoBehaviour {
 
     [SerializeField] private Transform targetPositionTranform;
+    public Transform path;
 
+    private List<Transform> nodes;
     private CarController carDriver;
     private Vector3 targetPosition;
+    private int currentnode=0;
 
     private void Awake() {
         carDriver = GetComponent<CarController>();
     }
 
-    private void Update() {
-        SetTargetPosition(targetPositionTranform.position);
+    private void Start()
+    {
+        Transform[] pathTransforms = path.GetComponentsInChildren<Transform>();
+        nodes = new List<Transform>();
 
+        for (int i = 0; i < pathTransforms.Length; i++)
+        {
+            if (pathTransforms[i] != path.transform)
+            {
+                nodes.Add(pathTransforms[i]);
+            }
+        }
+        SetTargetPosition(nodes[currentnode].position);
+    }
+
+    private void Update() {
+
+        Debug.Log(currentnode);
         float forwardAmount = 0f;
         float turnAmount = 0f;
         float angleToDir=0f;
-        float reachedTargetDistance = 1f;
+        float reachedTargetDistance = 5f;
         float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
+
         if (distanceToTarget > reachedTargetDistance) {
             // Still too far, keep going
             Vector3 dirToMovePosition = (targetPosition - transform.position).normalized;
             float dot = Vector3.Dot(transform.forward, dirToMovePosition);
-
             if (dot > 0) {
                 // Target in front
                 forwardAmount = 1f;
@@ -56,19 +74,23 @@ public class CarDriverAI : MonoBehaviour {
             }
         } else {
             // Reached target
+            currentnode++;
+            SetTargetPosition(nodes[currentnode].position);
             if (carDriver.GetSpeed() > 15f) {
                 forwardAmount = -1f;
             } else {
                 forwardAmount = 0f;
             }
             turnAmount = 0f;
+            
+            
         }
 
         carDriver.SetInputs(forwardAmount, angleToDir); //inputs to drive car, probably
     }
 
-    public void SetTargetPosition(Vector3 targetPosition) {
-        this.targetPosition = targetPosition;
+    public void SetTargetPosition(Vector3 targetPositionA) {
+        this.targetPosition = targetPositionA;
     }
 
 }
