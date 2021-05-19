@@ -14,12 +14,7 @@ public class WeaponManager : MonoBehaviour
     // Start is called before the first frame update
 
     
-    void Start()
-    {
-        current_Weapon_Index = 0;
-        weapons[current_Weapon_Index].gameObject.SetActive(true);
-
-    }
+    
 
     // Update is called once per frame
     void Update()
@@ -32,6 +27,11 @@ public class WeaponManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Alpha2))
         {
             TurnOnSelectedWeapon(1);
+
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            weapons[current_Weapon_Index].gameObject.SetActive(false);
 
         }
     }//update

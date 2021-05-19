@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private CharacterController character_Controller;
-
+    public Animator anim;
     private Vector3 move_Direction;
 
     [SerializeField]
@@ -31,8 +31,14 @@ public class PlayerMovement : MonoBehaviour
 
     void MoveThePlayer()
     {
-        move_Direction = new Vector3(Input.GetAxis(Axis.HORIZONTAL), 0f, 
-                                     Input.GetAxis(Axis.VERTICAL));
+        float verticalAxis = Input.GetAxis(Axis.VERTICAL);
+        float horizontalAxis = Input.GetAxis(Axis.HORIZONTAL);
+
+        anim.SetFloat("vertical", verticalAxis);
+        anim.SetFloat("horizontal", horizontalAxis);
+
+        move_Direction = new Vector3(horizontalAxis, 0f, 
+                                     verticalAxis);
 
         move_Direction = transform.TransformDirection(move_Direction);
         move_Direction *= speed * Time.deltaTime;
@@ -53,6 +59,8 @@ public class PlayerMovement : MonoBehaviour
         if(character_Controller.isGrounded && Input.GetKeyDown(KeyCode.Space))  //also gtkeyup
         {
             vertical_Velocity = jump_Force;
+            anim.SetBool("jump", true);
         }
+        else { anim.SetBool("jump", false); }
     }
 }
