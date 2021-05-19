@@ -30,6 +30,14 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform rearLeftWheelTransform;
     [SerializeField] private Transform rearRightWheelTransform;
 
+    [Header("Sensors")]
+    public float sensorLength = 5f;
+    public Vector3 frontSensorPosition = new Vector3(0f, 0.2f, 0.5f);
+    public float frontSideSensorPosition = 0.5f;
+    public float frontSensorAngle = 30f;
+
+
+
     private void FixedUpdate()
     {
        
@@ -53,6 +61,7 @@ public class CarController : MonoBehaviour
 
     public void SetInputs(float forwardAmount, float turnAmount)
     {
+        Sensors();
         rearLeftWheelCollider.motorTorque = forwardAmount* motorForce;
         rearRightWheelCollider.motorTorque = forwardAmount* motorForce;
         if ((turnAmount > maxSteerAngle && turnAmount >= 0) || turnAmount< -maxSteerAngle)
@@ -66,6 +75,65 @@ public class CarController : MonoBehaviour
         frontLeftWheelCollider.steerAngle = turnAmount;
         frontRightWheelCollider.steerAngle = turnAmount;
         UpdateWheels();
+    }
+
+    private void Sensors()
+    {
+        RaycastHit hit;
+        Vector3 sensorStartPos = transform.position;
+        sensorStartPos += transform.forward * frontSensorPosition.z;
+        sensorStartPos += transform.up * frontSensorPosition.y;
+
+        //frontcenter sensor
+        if(Physics.Raycast(sensorStartPos, transform.forward, out hit, sensorLength))
+        {
+         //   if(hit.collider.CompareTag("Terrain"))
+            {
+                Debug.DrawLine(sensorStartPos, hit.point);
+            }
+           
+        }
+
+        //frontright sensor
+        sensorStartPos += transform.right * frontSideSensorPosition;
+        if (Physics.Raycast(sensorStartPos, transform.forward, out hit, sensorLength))
+        {
+          //  if (hit.collider.CompareTag("Road"))
+            {
+                Debug.DrawLine(sensorStartPos, hit.point);
+            }
+        }
+
+        //front right angle sensor  
+        if (Physics.Raycast(sensorStartPos, Quaternion.AngleAxis(frontSensorAngle, transform.up) * transform.forward, out hit, sensorLength))
+        {
+     //       if (hit.collider.CompareTag("Road"))
+            {
+                Debug.DrawLine(sensorStartPos, hit.point);
+            }
+        }
+
+        //front left sensor
+        sensorStartPos -= transform.right * 2 * frontSideSensorPosition;
+        if (Physics.Raycast(sensorStartPos, transform.forward, out hit, sensorLength))
+        {
+      //      if (hit.collider.CompareTag("Road"))
+            {
+                Debug.DrawLine(sensorStartPos, hit.point);
+            }
+        }
+
+        // angled front left sensor
+        if (Physics.Raycast(sensorStartPos, Quaternion.AngleAxis(-frontSensorAngle, transform.up) * transform.forward, out hit, sensorLength))
+        {
+            if (hit.collider.CompareTag("Road"))
+            {
+                Debug.DrawLine(sensorStartPos, hit.point);
+            }
+        }
+
+
+
     }
 
     private void ApplyBreaking()
