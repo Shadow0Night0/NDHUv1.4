@@ -5,6 +5,7 @@ using UnityEngine;
 public class CarDriverAI : MonoBehaviour {
 
     [SerializeField] private Transform targetPositionTranform;
+    [SerializeField] private bool isClockwise;
     public Transform path;
 
     private List<Transform> nodes;
@@ -20,12 +21,24 @@ public class CarDriverAI : MonoBehaviour {
     {
         Transform[] pathTransforms = path.GetComponentsInChildren<Transform>();
         nodes = new List<Transform>();
-
-        for (int i = 0; i < pathTransforms.Length; i++)
+        if (isClockwise)
         {
-            if (pathTransforms[i] != path.transform)
+            for (int i = 0; i < pathTransforms.Length; i++)
             {
-                nodes.Add(pathTransforms[i]);
+                if (pathTransforms[i] != path.transform)
+                {
+                    nodes.Add(pathTransforms[i]);
+                }
+            }
+        }
+        else
+        {
+            for (int i = pathTransforms.Length-1; i >=0; i--)
+            {
+                if (pathTransforms[i] != path.transform)
+                {
+                    nodes.Add(pathTransforms[i]);
+                }
             }
         }
         SetTargetPosition(nodes[currentnode].position);
@@ -75,6 +88,10 @@ public class CarDriverAI : MonoBehaviour {
         } else {
             // Reached target
             currentnode++;
+            if (currentnode >= nodes.Count)
+            {
+                currentnode = 0;
+            }
             SetTargetPosition(nodes[currentnode].position);
             if (carDriver.GetSpeed() > 15f) {
                 forwardAmount = -1f;
