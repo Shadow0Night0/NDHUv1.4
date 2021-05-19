@@ -9,6 +9,7 @@ TagManager:
   - Look Root
   - FP Camera
   - Arrow
+  - Road
   layers:
   - Default
   - TransparentFX
