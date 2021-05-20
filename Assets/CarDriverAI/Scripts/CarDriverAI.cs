@@ -20,6 +20,7 @@ public class CarDriverAI : MonoBehaviour {
     private void Start()
     {
         Transform[] pathTransforms = path.GetComponentsInChildren<Transform>();
+
         nodes = new List<Transform>();
         if (isClockwise)
         {
