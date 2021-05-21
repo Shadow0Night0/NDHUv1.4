@@ -14,9 +14,7 @@ public class SnapToGround : MonoBehaviour
                 if (hit.collider.gameObject == transform.gameObject)
                     continue;
 
-                
                 transform.position = hit.point;
-                transform.position += new Vector3(0, 1, 0);
                 break;
             }
         }

@@ -10,6 +10,7 @@ TagManager:
   - FP Camera
   - Arrow
   - Road
+  - Car
   layers:
   - Default
   - TransparentFX

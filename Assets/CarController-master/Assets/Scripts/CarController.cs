@@ -92,7 +92,16 @@ public class CarController : MonoBehaviour
         float avoidMultiplier = 0;
         avoiding = false;
 
-        
+
+        if (Physics.Raycast(sensorStartPos, transform.forward, out hit, sensorLength))
+        {
+            if (!hit.collider.CompareTag("Car"))
+            {
+                ApplyBreaking();
+                Debug.DrawLine(sensorStartPos, hit.point);
+                avoidMultiplier -= 1f;
+            }
+        }
 
         //frontright sensor
         sensorStartPos += transform.right * frontSideSensorPosition;
