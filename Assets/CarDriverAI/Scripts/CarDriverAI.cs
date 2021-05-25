@@ -47,7 +47,7 @@ public class CarDriverAI : MonoBehaviour {
 
     private void Update() {
 
-        Debug.Log(currentnode);
+        
         float forwardAmount = 0f;
         float turnAmount = 0f;
         float angleToDir=0f;

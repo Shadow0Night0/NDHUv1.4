@@ -28,7 +28,6 @@ public class MinimapScript : MonoBehaviour
     {
         crosshair = GameObject.FindWithTag(Tags.CROSSHAIR);
         lastPosition = player.position;
-        Debug.Log(newIndicatorPos);
     }
 
     private void Start()

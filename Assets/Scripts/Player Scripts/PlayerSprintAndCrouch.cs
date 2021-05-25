@@ -82,7 +82,6 @@ public class PlayerSprintAndCrouch : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            anim.SetBool("crouch", true);
             //if we are crouching stand up
             if (is_Crouching)
             {
@@ -102,6 +101,8 @@ public class PlayerSprintAndCrouch : MonoBehaviour
             //if we are not crouching crouch
             else if(!is_Crouching && !is_Sprinting)
             {
+                anim.SetBool("crouch", true);
+
 
                 look_Root.localPosition = new Vector3(0f, crouch_Height, 0f);
                 playerMovement.speed = crouch_Speed;

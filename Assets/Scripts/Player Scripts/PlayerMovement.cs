@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator anim;
     private Vector3 move_Direction;
 
+
     [SerializeField]
     public float speed = 5f;
 
